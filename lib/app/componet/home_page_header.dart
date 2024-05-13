@@ -140,7 +140,7 @@ class HomeHeader extends SliverPersistentHeaderDelegate {
             ),
             Container(
               height: double.infinity,
-              padding: EdgeInsets.symmetric(horizontal: 12),
+              padding: const EdgeInsets.symmetric(horizontal: 12),
               decoration: BoxDecoration(
                 color: backRed,
                 borderRadius: BorderRadius.circular(20),
