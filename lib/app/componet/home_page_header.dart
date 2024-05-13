@@ -51,12 +51,9 @@ class HomeHeader extends SliverPersistentHeaderDelegate {
 
   Color logoColorCopy(shrinkOffset) {
     print(shrinkOffset);
-    if (shrinkOffset == 0) {
-      return Colors.black;
-    }
     if (shrinkOffset <= verOffset) {
-      final int alpha = (shrinkOffset / verOffset * 255).clamp(0, 255).toInt();
-      return Color.fromARGB(1 - alpha, 0, 0, 0);
+      final int alpha = (((verOffset-shrinkOffset)/verOffset) * 255).clamp(0, 255).toInt();
+      return Color.fromARGB(alpha, 0, 0, 0);
     } else {
       return Colors.transparent;
     }
@@ -66,18 +63,14 @@ class HomeHeader extends SliverPersistentHeaderDelegate {
   Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
     // TODO: implement build
     var paddingTop = MediaQuery.of(context).padding.top;
-    var isShowLogo = true;
+
     var searchOffsetR = 0.0;
     if (shrinkOffset < verOffset) {
-      if (shrinkOffset < 10) {
-        isShowLogo = true;
-      } else {
-        isShowLogo = false;
-      }
+
       searchOffsetR = shrinkOffset * 3.3;
     } else {
       searchOffsetR = verOffset * 3.3;
-      isShowLogo = false;
+
     }
 
     return Container(
@@ -89,7 +82,7 @@ class HomeHeader extends SliverPersistentHeaderDelegate {
         children: <Widget>[
           //定位,相当于绝对布局
           Positioned(
-            child: _buildTops(context, shrinkOffset, isShowLogo),
+            child: _buildTops(context, shrinkOffset),
             top: paddingTop,
           ),
           Positioned(
@@ -157,7 +150,7 @@ class HomeHeader extends SliverPersistentHeaderDelegate {
     );
   }
 
-  _buildTops(BuildContext context, double shrinkOffset, bool isShowLogo) {
+  _buildTops(BuildContext context, double shrinkOffset) {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: 50,

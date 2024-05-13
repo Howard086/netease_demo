@@ -14,6 +14,7 @@ class TabsView extends GetView<TabsController> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
