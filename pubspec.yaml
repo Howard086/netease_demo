@@ -1,15 +1,24 @@
 name: netease_demo
 version: 1.0.0+1
-publish_to: none
 description: A new Flutter project.
+publish_to: 'none'
 environment: 
   sdk: '>=3.3.4 <4.0.0'
 
 dependencies: 
   cupertino_icons: ^1.0.6
-  get: 4.6.6
   flutter: 
     sdk: flutter
+  module_home:
+    path: module_home
+  module_category:
+    path: module_category
+  module_shopcart:
+    path: module_shopcart
+  module_user:
+    path: module_user
+  module_goodbuy:
+    path: module_goodbuy
 
 dev_dependencies: 
   flutter_lints: 4.0.0
@@ -18,11 +27,4 @@ dev_dependencies:
 
 flutter: 
   uses-material-design: true
-
-  assets:
-    - assets/images/
-    - assets/images/mine/
-    - assets/images/user/
-    - assets/images/service/
-    - assets/json/home_data_json.json
 

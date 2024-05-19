@@ -1,0 +1,25 @@
+name: module_goodbuy
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter module project.
+environment: 
+  sdk: '>=3.3.4 <4.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.6
+  flutter: 
+    sdk: flutter
+  lib_base:
+    path: ../lib_base
+
+dev_dependencies: 
+  flutter_lints: ^3.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  module: 
+    androidPackage: com.example.module_goodbuy
+    iosBundleIdentifier: com.example.moduleGoodbuy
+    androidX: true
+
