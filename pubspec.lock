@@ -76,7 +76,7 @@ packages:
     source: sdk
     version: "0.0.0"
   get:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: get
       sha256: e4e7335ede17452b391ed3b2ede016545706c01a02292a6c97619705e7d2a85e
@@ -107,6 +107,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
+  lib_base:
+    dependency: transitive
+    description:
+      path: lib_base
+      relative: true
+    source: path
+    version: "0.0.1"
   lints:
     dependency: transitive
     description:
@@ -139,6 +146,41 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.11.0"
+  module_category:
+    dependency: "direct main"
+    description:
+      path: module_category
+      relative: true
+    source: path
+    version: "1.0.0+1"
+  module_goodbuy:
+    dependency: "direct main"
+    description:
+      path: module_goodbuy
+      relative: true
+    source: path
+    version: "1.0.0+1"
+  module_home:
+    dependency: "direct main"
+    description:
+      path: module_home
+      relative: true
+    source: path
+    version: "1.0.0+1"
+  module_shopcart:
+    dependency: "direct main"
+    description:
+      path: module_shopcart
+      relative: true
+    source: path
+    version: "1.0.0+1"
+  module_user:
+    dependency: "direct main"
+    description:
+      path: module_user
+      relative: true
+    source: path
+    version: "1.0.0+1"
   path:
     dependency: transitive
     description:

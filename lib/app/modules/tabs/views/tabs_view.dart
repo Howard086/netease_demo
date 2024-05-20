@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:netease_demo/app/modules/category/views/category_view.dart';
-import 'package:netease_demo/app/modules/goodBuy/views/good_buy_view.dart';
-import 'package:netease_demo/app/modules/home/views/home_view.dart';
-import 'package:netease_demo/app/modules/shopCart/views/shop_cart_view.dart';
-import 'package:netease_demo/app/modules/user/views/user_view.dart';
+import 'package:module_category/app/modules/category/views/category_view.dart';
+import 'package:module_goodbuy/app/modules/goodbuy/views/goodbuy_view.dart';
+import 'package:module_home/app/modules/home/views/home_view.dart';
+import 'package:module_shopcart/app/modules/shopcart/views/shopcart_view.dart';
+import 'package:module_user/app/modules/user/views/user_view.dart';
 
 import '../controllers/tabs_controller.dart';
 
@@ -57,8 +57,8 @@ class TabsView extends GetView<TabsController> {
     return <Widget>[
       const HomeView(),
       const CategoryView(),
-      const GoodBuyView(),
-      const ShopCartView(),
+      const GoodbuyView(),
+      const ShopcartView(),
       const UserView()
     ];
   }
